@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+      img {
+  border-radius: 50%;
+}
+    </style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    
+</head>
+
+<body onload="isload()" class = "d-flex flex-column h-100 bg-info">
+    <div class = "container-fluid text-white">
+      <div class = "row d-flex">
+        
+        <div class = "col-12 d-flex justify-content-start align-items-center">
+          <!-- <img src="images.jfif" alt="Emoji" style = "width:100px;height:100px;"> -->
+          <h3>   Thank you for submitting the form</h3>
+          <!-- <img src="images.jfif" alt="Emoji" style = "width:70px;height:70px;"> -->
+        </div>
+        <div class = "col-6 d-flex justify-content-start align-items-center">
+      
+        </div>
+      </div>
+      <div class = "row d-flex">
+        <div class = "col-6 d-flex justify-content-start">
+          <i class="fa fa-user icon"></i>FIRST NAME : 
+        </div>
+        <span name = "fname" class = "col-6 d-flex justify-content-start"></span>
+      </div>
+      <div class = "row d-flex">
+        <div class = "col-6 d-flex justify-content-start">
+          <i class="fa fa-user icon"></i> LAST NAME : 
+        </div>
+        <span name = "lname" class = "col-6 d-flex justify-content-start"></span>
+      </div>
+      <div class = "row d-flex">
+        <div class = "col-6 d-flex justify-content-start">
+          <i class="fa fa-user icon"></i>AGE : 
+        </div>
+        <span name = "age" class = "col-6 d-flex justify-content-start"></span>
+      </div>
+      <div class = "row d-flex">
+        <div class = "col-6 d-flex justify-content-start">
+          <i class="fa fa-envelope icon"></i>EMAIL : 
+        </div>
+        <span name = "email" class = "col-6 d-flex justify-content-start"></span>
+      </div>
+      <div class = "row d-flex">
+        <div class = "col-6 d-flex justify-content-start">
+          <i class="fa fa-phone"></i> PHONE : 
+        </div>
+        <div class = "col-6 d-flex justify-content-start">
+          <span name = "mobile"></span>-<span name = "mobile1"></span>-<span name = "mobile2"></span>
+        </div>
+      </div>
+      <div class = "row d-flex">
+        <div class = "col-6 d-flex justify-content-start">
+          <i class="fa fa-address-card-o"></i>ADDRESS : 
+        </div>
+        <div class = "col-6 d-flex justify-content-start">
+          <span name = "addr"></span>,<span name = "addr2"></span>
+        </div>
+      </div>
+      <div class = "row d-flex">
+        <div class = "col-6 d-flex justify-content-start">
+          <i class="fa fa-map-marker"></i> PINCODE : 
+        </div>
+        <span name = "pincode" class = "col-6 d-flex justify-content-start"></span>
+      </div>
+    </div>
+    <script>
+      const url = new URL(window.location.href);
+      let spans = document.querySelectorAll("span");
+
+      function isload() {
+        // console.log(spans);
+        spans.forEach((ele) => {
+          ele.innerText = url.searchParams.get(`${ele.attributes.name.value}`);
+        });
+      }
+  
+     </script>
+     </body>
+</html>

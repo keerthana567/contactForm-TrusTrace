@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    
+</head>
+
+<body class="d-flex flex-column h-100">
+    <div id="formsstat">
+        <div class="container-fluid bg-info text-white rounded shadow-lg w-100">
+            <form action="summa.html">
+                <div class="row d-flex justify-content-start">
+                    <h3>Contact form</h3>
+                </div>
+                <div class="row d-flex justify-content-start">
+                    <h5>Please fill in the form!</h5>
+                </div>
+                <div class="row d-flex justify-content-start">
+                    <div class="col-sm-2">
+                        <label for="first_name" class="form-label">Your name</label>
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="text" name="fname" id="first_name" placeholder="First name" required
+                            class="form-control"><br>
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="text" name="lname" id="last_name" placeholder="Last name" required
+                            class="form-control" ><br>
+
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-start">
+                    <div class="col-sm-2">
+                        <label for="ages" class="form-label">Age</label> <br>
+                    </div>
+                    <div class="col-sm-2">
+                        <input type="number" name="age" id="ages" placeholder="Your age" required class="form-control"
+                            v-model="age"><br>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-start">
+                    <div class="col-sm-2">
+                        <label for="email_id" class="form-label">Your email</label>
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="email" name="email" id="email_id" placeholder="eg:hello@contact.net" required
+                            class="form-control" ><br>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-start">
+                    <div class="col-sm-2">
+                        <label for="mnum" class="form-label">Phone</label><br>
+                    </div>
+                    <div class="col-sm-2">
+                        <input type="tel" name="mobile" id="mnum" placeholder="###" required class="form-control"
+                            v-model="phone1" maxlength="3" minlength="3"><br>
+                    </div>
+                    <div class="col-sm-2">
+                        <input type="tel" name="mobile1" id="mnum" placeholder="###" required class="form-control"
+                            v-model="phone2" maxlength="3" minlength="3"><br>
+                    </div>
+                    <div class="col-sm-2">
+                        <input type="tel" name="mobile2" id="mnum" placeholder="###" required class="form-control"
+                            v-model="phone3" maxlength="4" minlength="4"><br>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-start">
+                    <div class="col-sm-2">
+                        <label for="address" class="form-label">Address</label><br>
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="text" name="addr" id="addr" class="form-control form-control-sm" v-model="addr1"
+                            required> <br>
+                        <input type="text" name="addr2" id="addr1" class="form-control form-control-sm" > <br>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-start">
+                    <div class="col-sm-2">
+                        <label for="pincode" class="form-label">Zipcode</label> <br>
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="number" name="pincode" id="pincode" placeholder="Number" required
+                            class="form-control" ><br>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-start">
+                    <input type="submit" value="Submit" class="btn btn-outline-primary w-25">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
